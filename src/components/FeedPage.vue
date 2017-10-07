@@ -7,17 +7,21 @@
         </div>
       </div>
     </section>
+    <Feed></Feed>
     <div class="container">
-      <div class="notification">
-        This container is <strong>centered</strong> on desktop.
+      <div class="notification" v-for="transaction in allTransactions">
+        <FeedWidget></FeedWidget>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Feed from './Feed'
+
 export default {
   name: 'FeedPage',
+  components: {Feed},
   data () {
     return {
       
