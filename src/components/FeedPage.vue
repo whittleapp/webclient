@@ -8,11 +8,6 @@
       </div>
     </section>
     <Feed></Feed>
-    <div class="container">
-      <div class="notification" v-for="transaction in allTransactions">
-        <FeedWidget></FeedWidget>
-      </div>
-    </div>
   </div>
 </template>
 
