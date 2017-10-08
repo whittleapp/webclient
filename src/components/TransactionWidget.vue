@@ -1,5 +1,5 @@
 <template>
-  <div class="tile is-ancestor">
+  <div v-if="mainFeedShowing" class="tile is-ancestor">
     <div class="tile is-parent">
       <article class="tile is-child">
       </article>
@@ -37,13 +37,15 @@
 
 <script>
 import axios from 'axios'
+import qs from 'qs'
 import ConfirmationModal from './ConfirmationModal'
 
 export default {
   name: 'TransactionWidget',
   components: {ConfirmationModal},
   props: {
-    transaction: Object
+    transaction: Object,
+    index: Number
   },
   data () {
     return {
@@ -55,7 +57,8 @@ export default {
       modalType: "",
       ignore: "ignore",
       snooze: "snooze",
-      whittle: "whittle"
+      whittle: "whittle",
+      mainFeedShowing: true
     }
   },
   methods: {
@@ -66,17 +69,21 @@ export default {
     sendRequest: function (actionType) {
       let apiURL = `http://localhost:3000/businesses/${this.businessID}`
       axios.put(apiURL, {
-        actionType: true
+        [actionType]: true
       })
       .then(function (response) {
-        console.log(response);
+        console.log(response)
       })
       .catch(function (error) {
         console.log(error);
       })
-      console.log(actionType)
       this.modalType = ""
       this.showModal = false
+      this.mainFeedShowing = false
+      console.log("$$$$$$$$$$$")
+      console.log(this.index)
+      console.log("$$$$$$$$$$$")
+      // this.$emit('widgetRemoved', this.index)
     },
     resetModal: function () {
       this.modalType = ""
