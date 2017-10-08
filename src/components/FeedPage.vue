@@ -1,6 +1,6 @@
 <template>
   <div class="background">
-    <section class="hero is-medium is-dark">
+    <section class="hero is-small is-dark">
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title">Whittle</h1>
