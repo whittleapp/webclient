@@ -31,7 +31,7 @@
       <article class="tile is-child">
       </article>
     </div>
-    <ConfirmationModal v-if="showModal" :modalType="modalType"></ConfirmationModal>
+    <ConfirmationModal v-if="showModal" :modalType="modalType" :seller="seller"></ConfirmationModal>
   </div>
 </template>
 
