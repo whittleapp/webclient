@@ -20,9 +20,9 @@
           </div>
         </div>
         <div class="button-collection">
-          <a class="button is-large is-danger" @click="launchModal(ignore)">Ignore</a>
-          <a class="button is-large is-warning" @click="launchModal(snooze)">Snooze</a>
-          <a class="button is-large is-success" @click="launchModal(whittle)">Whittle this!</a>
+          <a class="button is-large is-danger title is-3" @click="launchModal(ignore)">Ignore</a>
+          <a class="button is-large is-warning title is-3" @click="launchModal(snooze)">Snooze</a>
+          <a class="button is-large is-success title is-3" @click="launchModal(whittle)">Whittle this!</a>
         </div>
 
       </article>
@@ -98,5 +98,10 @@ export default {
   .button
     margin: 2%
     width: 25%
+    box-shadow: 3px 3px 1px $dark
+    border-radius: 10px
+
+  div
+    font-family: $family-primary
 
 </style>

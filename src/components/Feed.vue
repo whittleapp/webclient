@@ -38,4 +38,6 @@ export default {
 <style lang="sass" scoped>
   @import '~bulma'
 
+  div
+    font-family: $family-primary
 </style>
