@@ -98,10 +98,14 @@ export default {
   .button
     margin: 2%
     width: 25%
+    border: 0px
     box-shadow: 3px 3px 1px $dark
     border-radius: 10px
 
   div
     font-family: $family-primary
+
+  .is-red
+    background: #cd3235
 
 </style>
