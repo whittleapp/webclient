@@ -20,9 +20,18 @@
           </div>
         </div>
         <div class="button-collection">
-          <a class="button is-large is-danger title is-3" @click="launchModal(ignore)">Ignore</a>
-          <a class="button is-large is-warning title is-3" @click="launchModal(snooze)">Snooze</a>
-          <a class="button is-large is-success title is-3" @click="launchModal(whittle)">Whittle this!</a>
+          <a class="button is-large is-outlined is-danger title is-5" @click="launchModal(ignore)">
+            <i class="fa fa-ban"></i>
+            Ignore
+          </a>
+          <a class="button is-large is-outlined is-danger title is-5" @click="launchModal(snooze)">
+            <i class="fa fa-bell"></i>
+            Snooze
+          </a>
+          <a class="button is-large is-outlined is-danger title is-5" @click="launchModal(whittle)">
+            <i class="fa fa-money"></i>
+            Whittle this!
+          </a>
         </div>
 
       </article>
@@ -88,7 +97,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-  @import '~bulma'
+  @import "../assets/styles/app.sass"
 
   .button-collection
     display: flex
@@ -98,10 +107,13 @@ export default {
   .button
     margin: 2%
     width: 25%
-    box-shadow: 3px 3px 1px $dark
+    border: 4px solid $red
     border-radius: 10px
 
   div
     font-family: $family-primary
+
+  .fa
+    padding-right: 5%
 
 </style>
