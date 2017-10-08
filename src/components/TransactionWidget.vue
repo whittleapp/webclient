@@ -6,23 +6,32 @@
     </div>
     <div class="tile is-parent is-10">
       <article class="tile is-child box">
-        <div class="tabs is-fullwidth ">
-          <ul>
-            <li>
-                <span class="subtitle">{{business}}</span>
-            </li>
-            <li>
-                <span class="subtitle">{{transactions}} purchases</span>
-            </li>
-            <li>
-                <span class="subtitle">${{totalSpent}}</span>
-            </li>
-          </ul>
+        <div class="has-text-centered">
+          <h1 class="title">{{business}}</h1>
+          <div class="tabs is-fullwidth ">
+            <ul>
+              <li>
+                  <span class="title is-4">{{transactions}} purchases</span>
+              </li>
+              <li>
+                  <span class="title is-4">${{totalSpent}}</span>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="button-collection">
-          <a class="button is-large is-danger" @click="launchModal(ignore)">Ignore</a>
-          <a class="button is-large is-warning" @click="launchModal(snooze)">Snooze</a>
-          <a class="button is-large is-success" @click="launchModal(whittle)">Whittle this!</a>
+          <a class="button is-large is-outlined is-danger title is-5" @click="launchModal(ignore)">
+            <i class="fa fa-ban"></i>
+            Ignore
+          </a>
+          <a class="button is-large is-outlined is-danger title is-5" @click="launchModal(snooze)">
+            <i class="fa fa-bell"></i>
+            Snooze
+          </a>
+          <a class="button is-large is-outlined is-danger title is-5" @click="launchModal(whittle)">
+            <i class="fa fa-money"></i>
+            Whittle this!
+          </a>
         </div>
 
       </article>
@@ -91,7 +100,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-  @import '~bulma'
+  @import "../assets/styles/app.sass"
 
   .button-collection
     display: flex
@@ -99,6 +108,15 @@ export default {
     justify-content: center
 
   .button
-    margin: 5px
+    margin: 2%
+    width: 25%
+    border: 4px solid $red
+    border-radius: 10px
+
+  div
+    font-family: $family-primary
+
+  .fa
+    padding-right: 5%
 
 </style>

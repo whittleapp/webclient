@@ -45,6 +45,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  @import '~bulma'
+  @import "../assets/styles/app.sass"
 
 </style>

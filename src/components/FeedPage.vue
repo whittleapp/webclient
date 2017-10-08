@@ -27,7 +27,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
-  @import '~bulma'
+  @import "../assets/styles/app.sass"
 
   .background
     background: $info
