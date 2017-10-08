@@ -13,7 +13,7 @@
             </li>
             <li>
                 <span class="title">{{transactions}} purchases</span>
-            </li>    
+            </li>
             <li>
                 <span class="title">${{totalSpent}}</span>
             </li>
@@ -79,5 +79,4 @@ export default {
 <style lang="sass" scoped>
   @import '~bulma'
 
-  
 </style>
