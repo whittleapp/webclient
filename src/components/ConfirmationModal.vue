@@ -23,7 +23,7 @@ export default {
   		messageOptions: {
   			ignore: `We will ignore transactions with ${this.business} in the future`,
   			snooze: `We will remind you about ${this.business} later`,
-  			whittle: `Great! We will transfer future savings from reductions in this spending with ${this.business} your savings account!`
+  			whittle: `Great! We will transfer future savings from reductions in your spending with ${this.business} to your savings account!`
   		}
   	}
   },
