@@ -6,8 +6,8 @@
 	      {{message}}
 	    </section>
 	    <footer class="modal-card-foot">
-	      <button class="button is-success">Ok!</button>
-	      <button class="button is-danger">Undo</button>
+	      <button @click="okPressed"class="button is-success">Ok!</button>
+	      <button @click="undoPressed" class="button is-danger">Undo</button>
 	    </footer>
 	  </div>
 	</div>
@@ -32,7 +32,15 @@ export default {
   		let messageKey = this.modalType
   		return this.messageOptions[messageKey]
   	}
-  } 
+  },
+	methods: {
+		okPressed: function () {
+			this.$emit('actionConfirmed', this.seller, this.modalType)
+		},
+		undoPressed: function() {
+			this.$emit('actionDenied')
+		}
+	} 
 }
 </script>
 

@@ -31,7 +31,7 @@
       <article class="tile is-child">
       </article>
     </div>
-    <ConfirmationModal v-if="showModal" :modalType="modalType" :seller="seller"></ConfirmationModal>
+    <ConfirmationModal @actionConfirmed="sendRequest" @actionDenied="resetModal" v-if="showModal" :modalType="modalType" :seller="seller"></ConfirmationModal>
   </div>
 </template>
 
@@ -61,6 +61,15 @@ export default {
     launchModal: function (type) {
       this.modalType = type
       this.showModal = true
+    },
+    sendRequest: function (business, actionType) {
+      console.log(business, actionType)
+      this.modalType = ""
+      this.showModal = false
+    },
+    resetModal: function () {
+      this.modalType = ""
+      this.showModal = false
     }
   }
 }
