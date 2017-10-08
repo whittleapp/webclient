@@ -1,7 +1,7 @@
 <template>
     <div class="container">
       <div class="notification">
-        <TransactionWidget @widgetRemoved="reRender" v-for="(transaction, index) in realTransactions" :transaction="transaction" :index="index"></TransactionWidget>
+        <TransactionWidget v-for="transaction in realTransactions" :transaction="transaction"></TransactionWidget>
       </div>
     </div>
   </div>
@@ -19,19 +19,11 @@ export default {
       realTransactions: []
     }
   },
-  methods: {
-    reRender: function (ind) {
-      this.realTransactions.splice(ind, 1)
-      console.log("*******************")
-      console.log(ind)
-    }
-  },
   // Fetches transactions when the component is created.
   created() {
     axios.get(`http://localhost:3000/businesses`)
     .then(response => {
       this.realTransactions = response.data.summary
-      console.log(this.realTransactions)
     })
     .catch(e => {
       console.log('You fucked up!')

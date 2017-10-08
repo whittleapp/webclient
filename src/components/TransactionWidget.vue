@@ -80,10 +80,6 @@ export default {
       this.modalType = ""
       this.showModal = false
       this.mainFeedShowing = false
-      console.log("$$$$$$$$$$$")
-      console.log(this.index)
-      console.log("$$$$$$$$$$$")
-      // this.$emit('widgetRemoved', this.index)
     },
     resetModal: function () {
       this.modalType = ""
