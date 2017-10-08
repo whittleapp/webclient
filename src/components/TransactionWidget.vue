@@ -9,7 +9,7 @@
         <div class="tabs is-fullwidth ">
           <ul>
             <li>
-                <span class="title">{{seller}}</span>
+                <span class="title">{{business}}</span>
             </li>
             <li>
                 <span class="title">{{transactions}} purchases</span>
@@ -31,7 +31,7 @@
       <article class="tile is-child">
       </article>
     </div>
-    <ConfirmationModal @actionConfirmed="sendRequest" @actionDenied="resetModal" v-if="showModal" :modalType="modalType" :seller="seller"></ConfirmationModal>
+    <ConfirmationModal @actionConfirmed="sendRequest" @actionDenied="resetModal" v-if="showModal" :modalType="modalType" :business="business"></ConfirmationModal>
   </div>
 </template>
 
@@ -47,9 +47,9 @@ export default {
   },
   data () {
     return {
-      seller: this.transaction.seller,
+      business: this.transaction.business,
       transactions: this.transaction.transactions,
-      totalSpent: this.transaction.totalSpent,
+      totalSpent: this.transaction.total_spent,
       showModal: false,
       modalType: "",
       ignore: "ignore",

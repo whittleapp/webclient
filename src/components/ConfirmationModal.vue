@@ -17,13 +17,13 @@
 
 export default {
   name: 'ConfirmationModal',
-  props: ['modalType', 'seller'],
+  props: ['modalType', 'business'],
   data () {
   	return {
   		messageOptions: {
-  			ignore: `We will ignore transactions with ${this.seller} in the future`,
-  			snooze: `We will remind you about ${this.seller} later`,
-  			whittle: `Great! We will transfer future savings from reductions in this spending with ${this.seller} your savings account!`
+  			ignore: `We will ignore transactions with ${this.business} in the future`,
+  			snooze: `We will remind you about ${this.business} later`,
+  			whittle: `Great! We will transfer future savings from reductions in this spending with ${this.business} your savings account!`
   		}
   	}
   },
@@ -35,7 +35,7 @@ export default {
   },
 	methods: {
 		okPressed: function () {
-			this.$emit('actionConfirmed', this.seller, this.modalType)
+			this.$emit('actionConfirmed', this.business, this.modalType)
 		},
 		undoPressed: function() {
 			this.$emit('actionDenied')
