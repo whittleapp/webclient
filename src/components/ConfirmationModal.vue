@@ -35,7 +35,7 @@ export default {
   },
 	methods: {
 		okPressed: function () {
-			this.$emit('actionConfirmed', this.business, this.modalType)
+			this.$emit('actionConfirmed', this.modalType)
 		},
 		undoPressed: function() {
 			this.$emit('actionDenied')

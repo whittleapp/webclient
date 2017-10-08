@@ -50,6 +50,7 @@ export default {
       business: this.transaction.business,
       transactions: this.transaction.transactions,
       totalSpent: this.transaction.total_spent,
+      businessID: this.transaction.id,
       showModal: false,
       modalType: "",
       ignore: "ignore",
@@ -62,8 +63,18 @@ export default {
       this.modalType = type
       this.showModal = true
     },
-    sendRequest: function (business, actionType) {
-      console.log(business, actionType)
+    sendRequest: function (actionType) {
+      let apiURL = `http://localhost:3000/businesses/${this.businessID}`
+      axios.put(apiURL, {
+        actionType: true
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+      console.log(actionType)
       this.modalType = ""
       this.showModal = false
     },
