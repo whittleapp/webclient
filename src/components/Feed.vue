@@ -19,7 +19,6 @@ export default {
       realTransactions: []
     }
   },
-
   // Fetches transactions when the component is created.
   created() {
     axios.get(`http://localhost:3000/businesses`)
