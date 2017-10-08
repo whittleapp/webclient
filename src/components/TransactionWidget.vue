@@ -9,13 +9,13 @@
         <div class="tabs is-fullwidth ">
           <ul>
             <li>
-                <span class="title">{{business}}</span>
+                <span class="subtitle">{{business}}</span>
             </li>
             <li>
-                <span class="title">{{transactions}} purchases</span>
+                <span class="subtitle">{{transactions}} purchases</span>
             </li>
             <li>
-                <span class="title">${{totalSpent}}</span>
+                <span class="subtitle">${{totalSpent}}</span>
             </li>
           </ul>
         </div>
@@ -78,5 +78,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="sass" scoped>
   @import '~bulma'
+
+  .button-collection
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .button
+    margin: 5px
 
 </style>
