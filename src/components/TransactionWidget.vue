@@ -6,18 +6,18 @@
     </div>
     <div class="tile is-parent is-10">
       <article class="tile is-child box">
-        <div class="tabs is-fullwidth ">
-          <ul>
-            <li>
-                <span class="subtitle">{{business}}</span>
-            </li>
-            <li>
-                <span class="subtitle">{{transactions}} purchases</span>
-            </li>
-            <li>
-                <span class="subtitle">${{totalSpent}}</span>
-            </li>
-          </ul>
+        <div class="has-text-centered">
+          <h1 class="title">{{business}}</h1>
+          <div class="tabs is-fullwidth ">
+            <ul>
+              <li>
+                  <span class="title is-4">{{transactions}} purchases</span>
+              </li>
+              <li>
+                  <span class="title is-4">${{totalSpent}}</span>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="button-collection">
           <a class="button is-large is-danger" @click="launchModal(ignore)">Ignore</a>
@@ -96,6 +96,7 @@ export default {
     justify-content: center
 
   .button
-    margin: 5px
+    margin: 2%
+    width: 25%
 
 </style>
